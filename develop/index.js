@@ -51,6 +51,18 @@ function init() {
         ${text}
       </text>
     </svg>`;
+
+      // Write the SVG string to a file
+      fs.writeFile("logo.svg", svg, (err) => {
+        if (err) {
+          console.error("Failed to create logo.svg:", err);
+        } else {
+          console.log("Generated logo.svg");
+        }
+      });
+    })
+    .catch((err) => {
+      console.error("Error:", err);
     });
 }
 
