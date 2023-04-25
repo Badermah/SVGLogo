@@ -60,7 +60,7 @@ function init() {
       }
 
       // Write the SVG string to a file
-      fs.writeFile("logo.svg", svgString, (err) => {
+      fs.writeFile('./examples/logo.svg', svgString, (err) => {
         if (err) {
           console.error("Failed to create logo.svg:", err);
         } else {
